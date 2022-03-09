@@ -54,10 +54,15 @@ function getRandomCup() {
 function handleGuess(userGuess, correctSpot) {
     resetStyles();
     totalGuess++;
-    (correctSpot + '-container').src = './assets/cupup.png';
+    
     if (userGuess === correctSpot) {
         correctGuess++;
-
+    } else if (cup1El === correctSpot) {
+        cup1El.src = './assets/cupup.png';
+    } else if (cup2El === correctSpot) {
+        cup2El.src = './assets/cupup.png';
+    } else {
+        cup3El.src = './assets/cupup.png';
     }
     totalGuesses();
 }
