@@ -92,5 +92,8 @@ footer {
 }
 #cups {
     display: flex;
-    align-items: center;
+    margin-bottom: 50px;
+}
+.counter {
+    margin-top: 50px;
 }
