@@ -1,8 +1,4 @@
 // import functions and grab DOM elements
-const cup1El = document.getElementById('oneCup-container');
-const cup2El = document.getElementById('twoCup-container');
-const cup3El = document.getElementById('threeCup-container');
-
 const button1 = document.getElementById('cup1Button');
 const button2 = document.getElementById('cup2Button');
 const button3 = document.getElementById('cup3Button');
