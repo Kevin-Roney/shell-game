@@ -23,3 +23,13 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+![wireframe](/assets/Untitled.png "wireframe of plan")
+
+1. set html elements
+    -buttons
+    -cups(images and elements)
+    -total count(+correct and incorrect count)(forgot this on the wireframe but we'll be mindful moving forward)
+2. set dom elements
+3. create generateRandomCup function
+4. set event listeners
+5. create function that checks if user selected the correct cup and adds totals
