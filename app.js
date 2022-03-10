@@ -11,14 +11,18 @@ const correctEl = document.getElementById('correct-guesses');
 const incorrectEl = document.getElementById('incorrect-guesses');
 const totalEl = document.getElementById('total-guesses');
 
+const img1 = document.getElementById('standard1');
+const img2 = document.getElementById('standard2');
+const img3 = document.getElementById('standard3');
+
 // let state
 let totalGuess = 0;
 let correctGuess = 0;
 
 function resetStyles() {
-    cup1El.src = './assets/cupdown.png';
-    cup2El.src = './assets/cupdown.png';
-    cup3El.src = './assets/cupdown.png';
+    img1.src = './assets/cupdown.png';
+    img2.src = './assets/cupdown.png';
+    img3.src = './assets/cupdown.png';
 }
 function totalGuesses() {
     correctEl.textContent = correctGuess;
@@ -57,14 +61,16 @@ function handleGuess(userGuess, correctSpot) {
     
     if (userGuess === correctSpot) {
         correctGuess++;
-    } else if (cup1El === correctSpot) {
-        cup1El.src = './assets/cupup.png';
-    } else if (cup2El === correctSpot) {
-        cup2El.src = './assets/cupup.png';
+    } 
+    if (correctSpot === 'oneCup') {
+        img1.src = `./assets/cupup.png`;
+    } else if (correctSpot === 'twoCup') {
+        img2.src = `./assets/cupup.png`;
     } else {
-        cup3El.src = './assets/cupup.png';
+        img3.src = `./assets/cupup.png`;
     }
     totalGuesses();
+    console.log(correctSpot);
 }
 
   // get user input
